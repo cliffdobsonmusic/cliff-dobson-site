@@ -4,135 +4,176 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cliff Dobson — Drummer | Musician | Educator</title>
-  <!-- Google Fonts: Kufam and Nunito -->
-  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@700;900&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
-    /* Reset */
+    :root {
+      --main-bg: #0b0b0b;
+      --text-color: #f5f5f5;
+      --accent: #ef4444;
+      --muted: #cccccc;
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background-color: #0b0b0b;
-      color: #f5f5f5;
+      background-color: var(--main-bg);
+      color: var(--text-color);
       line-height: 1.6;
     }
+
     a {
-      color: #ef4444; /* red accent */
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     a:hover {
       color: #f87171;
     }
 
-    /* Container */
     .container {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
     }
 
-    /* Header / Hero */
     header {
       text-align: center;
-      padding: 5rem 1rem 3rem;
+      padding: 5rem 1rem 2rem;
     }
+
     header h1 {
       font-family: 'Kufam', cursive;
       font-weight: 900;
       font-size: 3rem;
-      letter-spacing: 0.2em;
-      margin-bottom: 0.5rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #ef4444; /* red */
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      color: #ccc;
-      font-family: 'Nunito', sans-serif;
+      color: var(--accent);
+      margin-bottom: 1rem;
     }
 
-    /* Social links */
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
     }
+
     .social-links a {
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 0.5rem 1rem;
-      border: 2px solid #ef4444;
-      border-radius: 25px;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
       font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid var(--accent);
+      border-radius: 30px;
+      color: var(--accent);
+      transition: all 0.3s ease;
     }
+
     .social-links a:hover {
-      background-color: #ef4444;
-      color: #0b0b0b;
+      background-color: var(--accent);
+      color: var(--main-bg);
     }
 
-    /* Section: About */
-    section.about {
+    .hero-image {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      margin: 3rem auto 2rem;
+      background-color: #222;
+      border: 2px dashed #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+    }
+
+    .section {
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 4rem;
+      max-width: 800px;
+      margin: 3rem auto;
       font-size: 1.1rem;
-      color: #ddd;
-      font-family: 'Nunito', sans-serif;
+      color: var(--muted);
     }
 
-    /* Footer */
+    .cta-button {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: var(--accent);
+      color: var(--main-bg);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f87171;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #555;
-      font-family: 'Nunito', sans-serif;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
-        letter-spacing: 0.15em;
       }
-      header p {
-        font-size: 1rem;
-      }
-      .social-links a {
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
+
+      .hero-image {
+        height: 300px;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <h1>DRUMMER | MUSICIAN | EDUCATOR</h1>
-      <p>Cliff has been playing drums for over a decade. He specializes in helping musicians grow and excel with private lessons, workshops, and live performances.</p>
-      <nav class="social-links">
-        <a href="https://www.instagram.com/cliffdobson" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/cliffdobson" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.linkedin.com/in/cliffdobson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </nav>
+      <p>Cliff Dobson is a professional drummer and educator with over a decade of experience performing and teaching in various genres and settings.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/cliffdobson" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/cliffdobson" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/in/cliffdobson" target="_blank">LinkedIn</a>
+      </div>
     </header>
 
-    <section class="about">
-      <p>Whether you're a beginner or seasoned pro, Cliff's passion for music education drives him to tailor lessons to your unique style and goals. Explore his site to learn more about lessons, events, and upcoming gigs.</p>
+    <div class="hero-image">
+      Image Placeholder (Cliff performing or teaching)
+    </div>
+
+    <section class="section">
+      <p>Whether you're a beginner picking up sticks for the first time or an experienced player looking to refine your craft, Cliff offers tailored instruction to meet you at your level. He teaches private lessons, runs workshops, and performs live across the country.</p>
+      <a href="#" class="cta-button">Learn More</a>
     </section>
   </div>
 
   <footer>
-    &copy; 2025 Cliff Dobson
+    &copy; 2025 Cliff Dobson. All rights reserved.
   </footer>
 </body>
 </html>
+
